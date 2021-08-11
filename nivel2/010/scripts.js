@@ -1,20 +1,26 @@
-function calcularMedia(){
-    let nome = window.prompt('Qual o nome do aluno?')
-    let nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}`))
-    let nota2 = Number(window.prompt(`Além de ${nota1} qual foi a outra nota de ${nome}?`))
+function verifyStation(){
+    mes = window.prompt('Digite o mês por extenso, ex:(Setembro)')
 
-    let media = (nota1 + nota2) / 2
+    let saida = document.getElementById('saida')
 
-    res = document.getElementById('res')
+    let estacao;
 
-    res.innerHTML = `<p>Calculando a média final de <strong>${nome}</strong></p>`
-    res.innerHTML += `<p>As notas obtidas foram ${nota1} e ${nota2}</p>`
-    res.innerHTML += `<p>A média final será ${media}</p>`
-
-    if (media >= 6){
-        res.innerHTML += `<p style="color:green">Você passou</p>`
+    switch (mes.toUpperCase()) {
+        case 'JANEIRO': case 'FERVEREIRO': case 'MARÇO':
+            estacao = 'INVERNO'
+            break
+        case 'ABRIL': case 'MAIO': case 'JUNHO': 
+            estacao = 'PRIMAVERA'
+            break
+        case 'JULHO': case 'AGOSTO': case 'SETEMBRO':
+            estacao = 'VERÃO'
+        case 'OUTUBRO': case 'NOVEMBRO': case 'DEZEMBRO': 
+            estacao = 'OUTONO'
+            break
+        default:
+            estacao = 'INDEFINIDA'
+            break
     }
-    else{
-        res.innerHTML += `<p style="color:red">Você reprovou seu bosta</p>`
-    }
+    saida.innerHTML += `<p>No mês de ${mes}, estamos na estação ${estacao}</p>`
+
 }
