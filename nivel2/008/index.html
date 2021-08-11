@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="sortear()">
     <style>
         * body{
             font-size: 22px;
@@ -20,10 +20,10 @@
 
     <h1>Ex 008</h1>
 
-    <button onclick="calcular()">Clique para calcular</button>
-
+    <button id="botao" onclick="adivinharNum()">Tente adivinhar</button>
+    <p>Já pensei em um valor entre 1 e 10</p>
     <section id="result">
-        <p>O resultado vai aparecer aqui...</p>
+        <p></p>
         <hr></hr>
     </section>
 

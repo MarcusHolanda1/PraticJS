@@ -7,9 +7,9 @@ function sortear(){
 }
 
 function limpar(){
-    let limpe = document.getElementById('sortear')
+    let res = document.getElementById('sortear')
 
-    limpe.innerHTML = null
+    res.innerHTML = null
 
 
 }

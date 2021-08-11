@@ -1,15 +1,30 @@
-function calcular(){
-    let num = window.prompt('Digite um número')
+let saida = document.getElementById('result')
+let valor;
+let palpite;
 
-    let res = document.getElementById('result')
 
-    res.innerHTML = `<p> O número a ser analisado aqui será o <strong>${num}</strong> </p>`
-    res.innerHTML += `<hr></hr>`
-    res.innerHTML += `<p> O seu valor absoluto é ${Math.abs(num)} </p>`
-    res.innerHTML += `<p> A sua parte inteira é ${parseInt(num)} </p>`
-    res.innerHTML += `<p> O valor do número inteiro mais próximo é ${Math.round(num)} </p>`
-    res.innerHTML += `<p> A raiz quadrada do número é ${Math.sqrt(num)} </p>`
-    res.innerHTML += `<p> A raiz cubica é ${Math.cbrt(num)} </p>`
-    res.innerHTML += `<p> O valor de ${num}² é ${num ** 2}</p>`
-    res.innerHTML += `<p> O valor de ${num}³ é ${num ** 3}</p>`
+
+function sortear(){
+    let computador = Math.floor(Math.random() * 10)
+    valor = computador 
+    console.log(valor)
+}
+
+
+function adivinharNum() {  
+    
+    palpite = Number(window.prompt('Qual é o seu palpite?'))
+    
+    
+    if (palpite > valor){
+        saida.innerHTML += `<p>Você falou ${palpite}, meu número é <strong>MENOR</strong></p>`
+    }
+    else if (palpite < valor){
+        saida.innerHTML += `<p>Você falou ${palpite}, meu número é <strong>MAIOR</strong></p>`
+    }    
+    else{
+        saida.innerHTML += `<p>Você falou ${palpite} e ACERTOUUU PARABÉNS!!</p>`
+        document.getElementById('botao').style.visibility = 'hidden'
+
+    }
 }
