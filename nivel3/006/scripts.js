@@ -1,11 +1,13 @@
-function calcAge(){
-    let yearNasc = Number(window.prompt('Digite o ano em que você nasceu'))
+function tabuada(){
+    let saida = document.getElementById('saida')
+    let num = document.getElementById('fnum')
 
-    let dateAtual = new Date()
-    let yearAtual = dateAtual.getFullYear()
+    saida.innerHTML = `Tabuada de ${num}`
 
-    calc = yearAtual - yearNasc  
+    let c = 1
+    while (c <= 10) {
+        saida.innerHTML += `${num} x ${c} = <strong>${num * c}</strong><br>`
+        c ++
+    }
 
-    result = document.getElementById('result')    
-    result.innerHTML = `<p>Quem nasceu em <strong>${yearNasc}</strong>, vai completar <strong>${calc}</strong> anos em <strong>${yearAtual}</strong>`
 }

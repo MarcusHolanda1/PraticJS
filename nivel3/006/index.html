@@ -18,13 +18,22 @@
         }
     </style>
 
-    <h1>Ex 004</h1>
+<h1>Digita um número pra ver a tabuada pai</h1>
+<section id="entrada">
+    <!-- Se quiser maiores informações sobre uso de formulários, consulte nosso repositório das aulas de HTML5 e CSS3 -->
+    <form action="#" method="get">
+        <!-- O método GET envia os dados pela própria URL, durante a chamada -->
+        <label for="fnum">Valor final: </label>
+        <input type="number" name="num" id="fnum" placeholder="Númmeros">
+        <!-- O name de um objeto é mais usado por outras linguagens (como PHP), já o ID será mais usado por nós em JavaScript -->
+        <input type="submit" value="Tabu" formaction="javascript:tabuada()">
+        <!-- Ao usar o FORMACTION, é preciso colocar javascript: antes do nome da função -->
+    </form>
+</section>
 
-    <button onclick="calcAge()">Iniciar</button>
-
-    <section id="result">
-        <p></p>
-    </section>
+<section id="saida">
+    <p></p>
+</section>
 
 </body>
 
