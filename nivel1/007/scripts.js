@@ -10,4 +10,5 @@ function calcMedia () {
     res.innerHTML = `<p>Calculando a média final de ${nome}...</p>`
     res.innerHTML += `<p>As notas obtidas foram ${nota1} e ${nota2}</p>`
     res.innerHTML += `<p>A média final será ${(nota1 + nota2) /2} </p>`
+    
 }

@@ -1,5 +1,5 @@
 let contador = 0
-let result = document.getElementById('res')
+const result = document.getElementById('res')
 
 function contar(){
     contador ++

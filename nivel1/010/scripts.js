@@ -11,10 +11,9 @@ function calcularMedia(){
     res.innerHTML += `<p>As notas obtidas foram ${nota1} e ${nota2}</p>`
     res.innerHTML += `<p>A média final será ${media}</p>`
 
-    if (media >= 6){
+    if (media >= 6) {
         res.innerHTML += `<p style="color:green">Você passou</p>`
-    }
-    else{
+    } else {
         res.innerHTML += `<p style="color:red">Você reprovou seu bosta</p>`
     }
 }

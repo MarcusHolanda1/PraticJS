@@ -18,19 +18,24 @@
         }
     </style>
 
-<h1>Contando de 0 até um número positivo qualquer</h1>
-<p>Escolha o limite final para a contagem a partir do 0 (digite apenas números postivos)</p>
+<p style="color:red">Vamos colocar seus dois números na ordem descrescente ou crescente conforme o desejado</p> 
+
 <section id="entrada">
     <!-- Se quiser maiores informações sobre uso de formulários, consulte nosso repositório das aulas de HTML5 e CSS3 -->
     <form action="#" method="get">
         <!-- O método GET envia os dados pela própria URL, durante a chamada -->
         <label for="fnum">Valor final: </label>
         <input type="number" name="num1" id="fnum1" placeholder="Apenas positivos">
-        <input type="number" name="num2" id="fnum2" placeholder="Apenas positivos">
         <!-- O name de um objeto é mais usado por outras linguagens (como PHP), já o ID será mais usado por nós em JavaScript -->
-        <input type="submit" value="Contar" formaction="javascript:contagem()">
+       
+        <label for="fnum">Valor final: </label>
+        <input type="number" name="num2" id="fnum2" placeholder="Apenas positivos">
+       
+        <input type="submit" value="Contar" formaction="javascript:contar()">
         <!-- Ao usar o FORMACTION, é preciso colocar javascript: antes do nome da função -->
     </form>
+    
+    
 </section>
 
 <section id="saida">

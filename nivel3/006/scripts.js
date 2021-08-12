@@ -1,6 +1,6 @@
 function tabuada(){
     let saida = document.getElementById('saida')
-    let num = document.getElementById('fnum')
+    let num = Number(document.getElementById('fnum').value)
 
     saida.innerHTML = `Tabuada de ${num}`
 
